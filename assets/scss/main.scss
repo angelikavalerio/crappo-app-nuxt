@@ -1,0 +1,187 @@
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'utilities';
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Rubik;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $primary-color;
+    color: $white;
+    overflow-x: hidden;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        max-width: 100%;
+        margin: 0 2rem;
+    }
+
+    .heading-primary {
+        font-size: 3.6rem !important;
+        line-height: 4rem !important;
+    }
+
+    .heading-tertiary {
+        font-size: 3rem !important;
+        line-height: 3.5rem !important;
+    }
+
+    .text-primary {
+        font-size: 1.4rem;
+        max-width: 100% !important;
+    }
+
+    .shadow {
+        display: none !important;
+    }
+
+}
+
+h1,
+h4,
+h5,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+.heading-primary {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 6rem;
+}
+
+.heading-tertiary {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+}
+
+.text-primary {
+    line-height: 2.8rem;
+    letter-spacing: 0.16px;
+}
+
+.grid {
+    &__row {
+        display: flex;
+        justify-content: center;
+        gap: 10rem;
+
+        .grid__col {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+
+            .grid__img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* found in products and hero section */
+.chevron-right {
+    background: $white;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+}
+
+/* products and   section*/
+.form {
+    display: flex;
+    gap: 4.8rem;
+    width: 100%;
+
+    &__input {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #E0E0E0;
+        padding: 1.2rem 0;
+        width: 100%;
+
+        &::placeholder {
+            color: black;
+        }
+
+        &:focus {
+            border-color: $color-accent;
+        }
+    }
+
+    &__input--1 {
+        width: 40rem;
+    }
+
+    &__input--2 {
+        width: 20rem;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .form {
+        flex-direction: column;
+        gap: 3rem;
+
+        &__input {
+            font-size: 1.4rem;
+        }
+
+        &__input--2 {
+            width: 100%;
+        }
+
+    }
+}
+
+/* shadows About and Features*/
+.shadow {
+    position: absolute;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@supports (animation-timeline: view()) {
+
+    img,
+    .grid__col {
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+    }
+}
