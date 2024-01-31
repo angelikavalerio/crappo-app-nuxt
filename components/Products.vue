@@ -240,9 +240,13 @@ const products = reactive([
 }
 
 @media only screen and (max-width: 900px) {
+
   .products__container {
+    margin: 0;
+    padding: 0;
 
     .products {
+      padding: 0;
       .calculator {
         padding: 3rem;
 
@@ -275,6 +279,10 @@ const products = reactive([
         }
       }
 
+      .grid__col {
+        margin: 0 2rem;
+        width: 100% !important;
+      }
     }
   }
 }
