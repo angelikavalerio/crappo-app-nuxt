@@ -139,6 +139,27 @@
     }
 
   }
+}
 
+@media only screen and (max-width: 350px) {
+  .hero {
+    &__content {
+      .hero__title {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+      .sale-banner {
+        &--emphasize {
+          .emphasis-text {
+            font-size: 1rem;
+          }
+        }
+
+        &--text {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
 </style>

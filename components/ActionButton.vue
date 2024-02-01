@@ -25,4 +25,10 @@
       transform: translateY(0);
     }
   }
+
+  @media only screen and (max-width: 350px) {
+    .button {
+       font-size: 1.2rem;
+    }
+}
 </style>

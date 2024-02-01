@@ -204,4 +204,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 350px) {
+    .footer {
+        .heading-tertiary {
+          width: 100%;
+        }
+
+        .text-primary {
+          text-align: center;
+        }
+
+        .grid__row {
+          .payment_icons {
+            flex-wrap: wrap;
+          }
+        }
+    }
+}
 </style>
